@@ -45,10 +45,10 @@ const AttendanceSidebar = ({ sidemenu, clickEvent }) => {
   }, []);
 
   const getAllPermissions = async () => {
-    const user_Id = localStorage.getItem("user_id");
+    const user_type_id = localStorage.getItem("user_type_id");
     const data = await sendRequest(
       "get",
-      `api/permission?usertypeId=${user_Id}`,
+      `api/permission?usertypeId=${user_type_id}`,
       {},
       {
         headers: { Authorization: `Bearer ${token}` },
