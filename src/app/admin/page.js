@@ -37,7 +37,7 @@ const AdminLogin = () => {
       data?.data?.userTypeName == "SuperAdmin"
     ) {
       if (data.status == true) {
-        await getAllowedRoles(data.data.id, data.token);
+        await getAllowedRoles(data.data.user_type, data.token);
         localStorage.setItem("token", data.token);
         localStorage.setItem("user_type", data.data.userTypeName);
         localStorage.setItem("user_id", data.data.id);
