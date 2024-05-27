@@ -40,6 +40,7 @@ const AdminLogin = () => {
         await getAllowedRoles(data.data.user_type, data.token);
         localStorage.setItem("token", data.token);
         localStorage.setItem("user_type", data.data.userTypeName);
+        localStorage.setItem("user_type_id", data.data.user_type);
         localStorage.setItem("user_id", data.data.id);
         localStorage.setItem("user_name", data.data.name);
         localStorage.setItem("admin_email", data.data.email);
