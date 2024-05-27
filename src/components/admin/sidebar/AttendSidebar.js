@@ -58,10 +58,10 @@ const AttendanceSidebar = ({ sidemenu, clickEvent }) => {
   };
 
   const getAllowedRoles = async () => {
-    const user_Id = localStorage.getItem("user_id");
+    const user_type_Id = localStorage.getItem("user_type_id");
     const data = await sendRequest(
       "get",
-      `api/permission/allowedRoles?usertypeId=${user_Id}`,
+      `api/permission/allowedRoles?usertypeId=${user_type_Id}`,
       {},
       {
         headers: { Authorization: `Bearer ${token}` },
